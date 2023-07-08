@@ -27,3 +27,5 @@
 
 ## Quick look at JS
  - Just another stupid dynamic langauage. I don't think I need to learn it. Let's code.
+ - JS API: browzer APIs and third-part APIs.
+  - Browzer APIs: DOM APIs / Data Fetch APIs / Graphic APIs / Video Audio APIs / Device APIs / Storage APIs
