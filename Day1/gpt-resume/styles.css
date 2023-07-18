@@ -1,0 +1,19 @@
+/* styles.css */
+#resume {
+  width: 80%;
+  margin: auto;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+#basic-info div, #education div, #work-experience div {
+  margin-bottom: 10px;
+}
+
+#save-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+}

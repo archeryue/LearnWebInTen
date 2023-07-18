@@ -1,28 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Resume</title>
-    <link rel="stylesheet" href="resume.css">
-    <script src="resume.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script charset="UTF-8" src="click.js"></script>
 </head>
-<body>
+<body onload="registerClickHandler();">
     <div class="section">
         <h2>Profile</h2>
         <div class="profile-info">
             <p><strong>Name:</strong> Your Name</p>
             <p><strong>Tel:</strong> Your Telephone Number</p>
-            <p><strong>Email:</strong> Your Email</p>
+            <p><strong>Email:</strong> <a href="mail:archer@gmail.com">Your Email</a></p>
         </div>
     </div>
 
     <div class="section">
         <h2>Education</h2>
-        <p>Education details go here.</p>
+        <p contenteditable="true">Education details go here.</p>
     </div>
 
     <div class="section">
         <h2>Work Experience</h2>
-        <p>Work experience details go here.</p>
+        <p contenteditable="true">Work experience details go here.</p>
     </div>
 </body>
 </html>
