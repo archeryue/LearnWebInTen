@@ -1,25 +1,60 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0 auto;
+    width: 800px;
 }
 
 .section {
     margin-bottom: 20px;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #0067a5;
 }
 
 .section h2 {
     font-size: 24px;
-    color: #333;
+    color: #0067a5;
 }
 
 .section p {
     font-size: 18px;
 }
 
-.profile-info {
-    font-size: 16px;
+.contact {
+    display: inline;
+}
+
+.profile {
     line-height: 24px;
-    color: #333;
+    color: #0067a5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.period {
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    color: #0067a5;
+}
+
+.title {
+    display: flex;
+    font-weight: bold;
+}
+
+.time {
+    display: flex;
+}
+
+.clear {
+    clear: both;
 }
 
 a:link, a:visited {

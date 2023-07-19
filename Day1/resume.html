@@ -1,48 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>Resume</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <script charset="UTF-8" src="click.js"></script>
-</head>
-<body onload="registerClickHandler();">
-    <div class="section">
-        <h2>Profile</h2>
-        <div class="profile-info">
-            <p><strong>Name:</strong> Your Name</p>
-            <p><strong>Tel:</strong> Your Telephone Number</p>
-            <p><strong>Email:</strong> <a href="mail:archer@gmail.com">Your Email</a></p>
+    <head>
+        <meta charset="UTF-8">
+        <title>Resume</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script charset="UTF-8" src="click.js"></script>
+    </head>
+    <body onload="registerClickHandler();">
+        <div class="section profile">
+            <div class="name" contenteditable="true">Your Name</div>
+            <div>
+                <p class="contact" contenteditable="true"><strong>Tel:</strong> Your Telephone Number</p>
+                <p class="contact" contenteditable="true"><strong>Email:</strong> <a href="mail:archer@gmail.com">Your Email</a></p>
+            </div>
         </div>
-    </div>
-    <div class="section">
-        <h2>Skills</h2>
-        <ul>
-            <li contenteditable="true">Skill 1</li>
-            <li contenteditable="true">Skill 2</li>
-            <li contenteditable="true">Skill 3</li>
-        </ul>
-    </div>
 
-    <div class="section">
-        <h2>Education</h2>
-        <p contenteditable="true">Education details go here.</p>
-    </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li contenteditable="true">Skill 1</li>
+                <li contenteditable="true">Skill 2</li>
+                <li contenteditable="true">Skill 3</li>
+            </ul>
+        </div>
 
-    <div class="section">
-        <h2>Work Experience</h2>
-        <div class="sub-section">
-            <h3>Job Title</h3>
-            <p contenteditable="true">Work experience details go here.</p>
+        <div class="section">
+            <h2>Education</h2>
+            <div class="sub-section">
+                <div class="period">
+                    <p class="title" contenteditable="true">University</p>
+                    <p class="time" contenteditable="true">2010 - 2014</p>
+                </div>
+                <p class="clear" contenteditable="true">Education details go here.</p>
+            </div>
         </div>
-        <div class="sub-section">
-            <h3>Job Title</h3>
-            <p contenteditable="true">Work experience details go here.</p>
+
+        <div class="section">
+            <h2>Work Experience</h2>
+            <div class="sub-section">
+                <div class="period">
+                    <p class="title" contenteditable="true">Job Title</p>
+                    <p class="time" contenteditable="true">2020 - now &nbsp;</p>
+                </div>
+                <p contenteditable="true">Work experience details go here.</p>
+            </div>
+            <div class="sub-section">
+                <div class="period">
+                    <p class="title" contenteditable="true">Job Title</p>
+                    <p class="time" contenteditable="true">2017 - 2020</p>
+                </div>
+                <p contenteditable="true">Work experience details go here.</p>
+            </div>
+            <div class="sub-section">
+                <div class="period">
+                    <p class="title" contenteditable="true">Job Title</p>
+                    <p class="time" contenteditable="true">2014 - 2017</p>
+                </div>
+                <p contenteditable="true">Work experience details go here.</p>
+            </div>
         </div>
-        <div class="sub-section">
-            <h3>Job Title</h3>
-            <p contenteditable="true">Work experience details go here.</p>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
