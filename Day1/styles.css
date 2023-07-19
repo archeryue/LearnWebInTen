@@ -1,25 +1,15 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
     margin: 0 auto;
     width: 800px;
 }
 
-.section {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #0067a5;
+ul {
+    padding-left: 20px;
 }
 
-.section h2 {
-    font-size: 24px;
-    color: #0067a5;
-}
-
-.section p {
-    font-size: 18px;
-}
-
-.contact {
-    display: inline;
+li {
+    margin-bottom: 5px;
 }
 
 .profile {
@@ -36,11 +26,31 @@ body {
     margin-bottom: 10px;
 }
 
+.contact {
+    display: inline;
+    margin: 10px;
+}
+
+.section {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #0067a5;
+}
+
+.section h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #0067a5;
+}
+
+.section p {
+    font-size: 18px;
+}
+
 .period {
     font-size: 18px;
     display: flex;
     justify-content: space-between;
-    height: 50px;
     color: #0067a5;
 }
 
@@ -51,10 +61,6 @@ body {
 
 .time {
     display: flex;
-}
-
-.clear {
-    clear: both;
 }
 
 a:link, a:visited {
