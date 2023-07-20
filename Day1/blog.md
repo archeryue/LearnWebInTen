@@ -29,3 +29,7 @@
  - Just another stupid dynamic langauage. I don't think I need to learn it. Let's code.
  - JS API: browzer APIs and third-part APIs.
     - Browzer APIs: DOM APIs / Data Fetch APIs / Graphic APIs / Video Audio APIs / Device APIs / Storage APIs
+  
+## Supplements after demo coding
+ - Learned a html attribute: contenteditable, make html element content editable.
+ - CSS Display: flex, this one is awesome. Basically can be used to implement all kinds of website layout.
