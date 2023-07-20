@@ -23,6 +23,8 @@
  - Fucking cumbersome content. but the idea is simple: put the style attributes together, make them much easier to manage.
  - Syntax: selector {color: xx; background-color: yy; border: zz;}
     - selector can be: elements, class, id and so on. select DOMs and set the sytle.
+ - Box Model: Margin -> Boarder -> Padding -> Content.
+ - Display: block & inline. Layout: flex.
  - Ok, there's a lot of head-scratching details here, let's just forget about it. we will learn UI framework anyway.
 
 ## Quick look at JS
