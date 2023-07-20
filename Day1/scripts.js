@@ -6,3 +6,10 @@ function registerClickHandler() {
         });
     }
 }
+
+function addSubSection(clazzNmae) {
+    var subList = document.getElementsByClassName(clazzNmae);
+    let lastSub = subList[subList.length-1];
+    let newSub = lastSub.cloneNode(true);
+    lastSub.parentNode.insertBefore(newSub, lastSub.nextSibling);
+}
