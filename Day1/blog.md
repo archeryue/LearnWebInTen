@@ -24,7 +24,7 @@
  - Syntax: selector {color: xx; background-color: yy; border: zz;}
     - selector can be: elements, class, id and so on. select DOMs and set the sytle.
  - Box Model: Margin -> Boarder -> Padding -> Content.
- - Display: block & inline. Layout: flex.
+ - Display: block & inline. Layout: flex & grid.
  - Ok, there's a lot of head-scratching details here, let's just forget about it. we will learn UI framework anyway.
 
 ## Quick look at JS
@@ -35,3 +35,4 @@
 ## Supplements after demo coding
  - Learned a html attribute: contenteditable, make html element content editable.
  - CSS Display: flex, this one is awesome. Basically can be used to implement all kinds of website layout.
+ - CSS Display: grid, this one is also awesome when you need to arrange a lot of block elements.
