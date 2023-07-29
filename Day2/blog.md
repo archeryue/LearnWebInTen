@@ -37,7 +37,7 @@
 
  ## Supplement
  - I made a mistake. A compiled SFC is just a JavaScript module. Cool.
-    - So, the framework will generated DOMs and Styles by throught JS. 
+    - So, the framework will generated DOMs and Styles through JS.
  - SFC should be small and simple enough. It contains the content of what was supposed to be 3 files.
  - API styles: Vue components can be write in 2 styles: Options API and Composition API (wired names).
     - Options API: nature JS code, define logic by data, methods and mounted. all these are connected by this pointer.
