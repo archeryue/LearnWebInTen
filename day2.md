@@ -43,3 +43,4 @@
     - Options API: nature JS code, define logic by data, methods and mounted. all these are connected by this pointer.
     - Composition API: syntax sugar, by add the setup attribute in Script tag. It seems to make everything easier.
     - Well, Options API is better for understanding how the framework works. Composition API is easier to write and read. Which one will I pick? We will see.
+ - Another thing: Vite seems like a cool tool(Webpack + Nginx?). Need to learn more about it.
