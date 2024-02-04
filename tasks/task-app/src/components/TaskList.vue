@@ -21,10 +21,11 @@
 
 <script>
     export default {
-        props: ['tasks', 'listTitle'],
+        props: ['listTitle'],
         data() {
             return {
-                newTask: ''
+                newTask: '',
+                tasks: []
             };
         },
         methods: {
