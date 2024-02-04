@@ -2,19 +2,17 @@
     <div>
         <h2>{{ listTitle }}</h2>
 
-        <!-- 显示任务列表 -->
         <ul>
             <li v-for="task in tasks" :key="task.id">
-                {{ task.name }} - {{ task.completed ? '已完成' : '未完成' }}
-                <button @click="toggleTaskStatus(task)">切换状态</button>
-                <button @click="removeTask(task)">删除</button>
+                {{ task.name }} - {{ task.completed ? 'done' : 'todo' }}
+                <button @click="toggleTaskStatus(task)">done</button>
+                <button @click="removeTask(task)">remove</button>
             </li>
         </ul>
 
-        <!-- 添加新任务 -->
         <div>
-            <input v-model="newTask" @keyup.enter="addTask" placeholder="添加新任务">
-            <button @click="addTask">添加</button>
+            <input v-model="newTask" @keyup.enter="addTask" placeholder="add a new task">
+            <button @click="addTask">add</button>
         </div>
     </div>
 </template>
