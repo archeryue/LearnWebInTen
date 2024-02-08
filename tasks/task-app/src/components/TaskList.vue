@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>{{ listTitle }}</h2>
+        <h2>{{ props.listTitle }}</h2>
 
         <ul>
             <li v-for="task in tasks" :key="task.id">
@@ -17,30 +17,27 @@
     </div>
 </template>
 
-<script>
-    export default {
-        props: ['listTitle'],
-        data() {
-            return {
-                newTask: '',
-                tasks: []
-            };
-        },
-        methods: {
-            toggleTaskStatus(task) {
-                task.completed = !task.completed;
-            },
-            removeTask(task) {
-                const index = this.tasks.indexOf(task);
-                if (index > -1) {
-                    this.tasks.splice(index, 1);
-                }
-            },
-            addTask() {
-                if (this.newTask.trim() === '') return;
-                this.tasks.push({ id: this.tasks.length + 1, name: this.newTask, completed: false });
-                this.newTask = '';
-            }
-        }
-    };
+<script setup>
+import { ref } from 'vue';
+
+const props = defineProps(['listTitle']);
+const newTask = ref('');
+const tasks = ref([]);
+
+function toggleTaskStatus(task) {
+    task.completed = !task.completed;
+}
+
+function removeTask(task) {
+    const index = tasks.value.indexOf(task);
+    if (index > -1) {
+        tasks.value.splice(index, 1);
+    }
+}
+
+function addTask() {
+    if (newTask.value.trim() === '') return;
+    tasks.value.push({ id: tasks.value.length + 1, name: newTask.value, completed: false });
+    newTask.value = '';
+}
 </script>
