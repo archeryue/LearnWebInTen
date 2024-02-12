@@ -4,8 +4,8 @@
             <input type="checkbox" :checked="props.item.done" @change="toggleItem(props.item.id)" />
             <span>{{ props.item.text }}</span>
         </label>
+        <button class="btn btn-danger" @click="removeItem(props.item.id)">Remove</button>
     </li>
-    <button class="btn btn-danger" @click="removeItem(props.item.id)">Remove</button>
 </template>
 
 <script setup>
@@ -50,12 +50,6 @@ li label li input {
     top: -1px;
 }
 
-li button {
-    float: right;
-    display: none;
-    margin-top: 3px;
-}
-
 li:before {
     content: initial;
 }
@@ -66,6 +60,12 @@ li:last-child {
 
 li:hover {
     background-color: lightskyblue;
+}
+
+li button {
+    float: right;
+    display: none;
+    margin-top: 5px;
 }
 
 li:hover button {
