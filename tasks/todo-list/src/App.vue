@@ -17,9 +17,10 @@
 import TodoHeader from './components/TodoHeader.vue';
 import TodoFooter from './components/TodoFooter.vue';
 import TodoList from './components/TodoList.vue';
-import createApp from 'vue';
 
-const app = createApp({
+export default {
+  name: 'App',
+  components: { TodoHeader, TodoList, TodoFooter }, 
   data() {
     return {
       items: [
@@ -35,16 +36,15 @@ const app = createApp({
       this.items.push(item);
     },
     toggleItem(id) {
-
+      this.items.forEach((item) => {
+        if(item.id === id) item.done = !item.done;
+      })
     },
     removeItem(id) {
-
+      this.items = this.items.filter(item => item.id !== id);
     }
   }
-})
-  .component('TodoHeader', TodoHeader)
-  .component('TodoList', TodoList)
-  .component('TodoFooter', TodoFooter);
+}
 </script>
 
 <style scoped>
