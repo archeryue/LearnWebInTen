@@ -43,11 +43,15 @@ li label {
     cursor: pointer;
 }
 
+li input {
+    margin-left: 2px;
+    margin-right: 3px;
+}
+
 li label li input {
     vertical-align: middle;
     margin-right: 6px;
     position: relative;
-    top: -1px;
 }
 
 li:before {
