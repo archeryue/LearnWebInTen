@@ -1,11 +1,11 @@
 <template>
     <li>
         <label>
-            <input type="checkbox" :checked="item.done" @change="toggleItem(item.id)" />
-            <span>{{ item.text }}</span>
+            <input type="checkbox" :checked="props.item.done" @change="toggleItem(props.item.id)" />
+            <span>{{ props.item.text }}</span>
         </label>
     </li>
-    <button class="btn btn-danger" @click="removeItem(item.id)">Remove</button>
+    <button class="btn btn-danger" @click="removeItem(props.item.id)">Remove</button>
 </template>
 
 <script setup>
@@ -19,12 +19,12 @@
     });
 
     function toggleItem(id) {
-        toggleTodo(id);
+        props.toggleTodo(id);
     }
 
     function removeItem(id) {
         if (confirm('Are you sure you want to delete this item?')) {
-            removeTodo(id);
+            props.removeTodo(id);
         }
     };
 </script>
