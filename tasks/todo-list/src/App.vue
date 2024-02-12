@@ -2,7 +2,7 @@
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
   </header>
-  <div id="root">
+  <div>
     <div class="todo-container">
       <div class="todo-wrap">
         <TodoHeader :default-id="defaultId" :add-todo="addItem"/>
@@ -59,5 +59,18 @@ header {
 
 body {
   background: #ffffff;
+}
+
+.todo-container {
+  width: 600px;
+  margin: 0 auto;
+  background: lightcyan;
+  border-radius: 3px;
+}
+
+.todo-container .todo-wrap {
+  padding: 10px;
+  border: 1px solid #dddddd;
+  border-radius: 5px;
 }
 </style>

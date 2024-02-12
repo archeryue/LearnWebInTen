@@ -22,12 +22,13 @@ function addItem() {
 
 <style scoped>
 .todo-header input {
-    width: 560px;
+    width: 575px;
     height: 28px;
     font-size: 14px;
     border: 1px solid #cccccc;
     border-radius: 4px;
     padding: 4px 7px;
+    margin-bottom: 3px;
 }
 
 .todo-header input:focus {

@@ -24,7 +24,7 @@ function removeItem(id) {
 .todo-main {
     margin-left: 0px;
     border: 1px solid #dddddd;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 0px;
 }
 </style>
