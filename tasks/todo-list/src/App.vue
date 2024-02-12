@@ -13,35 +13,38 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import TodoHeader from './components/TodoHeader.vue';
 import TodoFooter from './components/TodoFooter.vue';
 import TodoList from './components/TodoList.vue';
-import { createApp, ref } from 'vue';
+import createApp from 'vue';
 
-const app = createApp({});
-app
+const app = createApp({
+  data() {
+    return {
+      items: [
+        { id: 0, text: 'coding: vue project todo-list', done: true },
+        { id: 1, text: 'reading: walden', done: false },
+        { id: 2, text: 'working: prepare jd', done: false }
+      ],
+      defaultId: 3
+    }
+  },
+  methods: {
+    addItem(item) {
+      this.items.push(item);
+    },
+    toggleItem(id) {
+
+    },
+    removeItem(id) {
+
+    }
+  }
+})
   .component('TodoHeader', TodoHeader)
   .component('TodoList', TodoList)
   .component('TodoFooter', TodoFooter);
-
-const items = ref([
-  {id: 1, text:'coding: vue project todo-list', done:true},
-  {id: 2, text:'reading: walden', done:false},
-  {id: 3, text:'working: prepare jd', done:false},
-]);
-const defaultId = ref(4);
-
-function addItem(item) {
-}
-
-function toggleItem(id) {
-
-}
-
-function removeItem(id) {
-
-}
 </script>
 
 <style scoped>
