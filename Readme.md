@@ -5,7 +5,7 @@
 ## Time Investment
  - 10 Days, around 3 hours per day.
 ## Plan
- - Day 1: Familiar with HTML/CSS/JS quickly, write a simple demo.
+ - Day 1: Get familiar with HTML/CSS/JS quickly, write a simple demo.
  - Day 2: Basically understand vue.js, write a simple Vue demo.
  - Day 3: Essentials of Vue.js : Reactivity & Rendering Mechanism.
  - Day 4: More details on Vue.js, Vue demo coding.
