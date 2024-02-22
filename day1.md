@@ -1,11 +1,11 @@
-# Day 1: Familiar with web development quickly
+# Day 1: Get familiar with web development quickly
 
 ## Where to start?
  - find a cool site: MDN(developer.mozilla.org), looks like really suitable for me.
 
 ## Quick look at HTML
  - Syntax: \<div id="xx" class="yy" style="zz"\> hello world \</div\>
- - Let's take a look the most commonly used elements. The first few elements are quite familiar: \<html\>, \<head\>, \<meta\>, \<title\>, \<body\>, \<header\>, \<footer\>, \<article\>, \<section\>, \<p\>, \<div\>, \<span\>, \<img\>, \<audio\>, \<video\>, \<canvas\>, \<ul\>, \<ol\>, \<li\>
+ - Let's take a look the most commonly used elements. The first few elements are quite familiar: \<html\>, \<head\>, \<meta\>, \<title\>, \<body\>, \<header\>, \<footer\>, \<article\>, \<section\>, \<p\>, \<div\>, \<span\>, \<button\>, \<input\>, \<img\>, \<audio\>, \<video\>, \<canvas\>, \<ul\>, \<ol\>, \<li\>
  - Do not know: \<aside\>, \<datalist\>, \<details\>, \<embed\>, \<nav\>, \<output\>, \<progress\>
     - And I forget the difference between \<canvas\> and \<img\>, Precisely, what does \<canvas\> for?
         - Well, \<canvas\> can deal with something named canvas scripting API or WebGL to draw graphics and animations. sounds like it's for web game development. cool!
