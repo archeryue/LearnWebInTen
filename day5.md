@@ -1,4 +1,8 @@
-# UI framework which works well with Vue.js
+# CSS framework which works well with Vue.js
+
+## Framework vs Library
+ - Framework: a solution & some relevant tools.
+ - Library: a set of reusable components.
 
 ## CSS framework: Tailwind CSS
  - CSS: try to manage complex style configs all around HTML tags.
@@ -12,7 +16,7 @@
         - Component itself is resuable in Vue.js.
     - Webpack or other packers can convert these Classes into CSS files.
 
-## UI framework: Element Plus
+## UI Library: Element Plus
  - UI Component: Encapsulate the HTML tags and relative styles into an Element Component.
  - Element+: UI Components written as Vue Templates. Cool! It's fxxking easy to use.
  - Vite can compile this UI Components and convert them into JS module(virtual DOM tree).
