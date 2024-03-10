@@ -1,11 +1,13 @@
 <template>
-    <li>
-        <label>
-            <input type="checkbox" :checked="props.item.done" @change="toggleItem(props.item.id)" />
-            <span>{{ props.item.text }}</span>
-        </label>
-        <button class="btn btn-danger" @click="removeItem(props.item.id)">Remove</button>
-    </li>
+    <el-card shadow="hover">
+        <div class="item">
+            <label>
+                <input type="checkbox" :checked="props.item.done" @change="toggleItem(props.item.id)" />
+                <span>{{ props.item.text }}</span>
+            </label>
+            <el-button type="danger" round size="small" @click="removeItem(props.item.id)">Remove</el-button>
+        </div>
+    </el-card>
 </template>
 
 <script setup>
@@ -30,49 +32,9 @@ function removeItem(id) {
 </script>
 
 <style scoped>
-li {
-    list-style: none;
-    height: 36px;
-    line-height: 36px;
-    padding: 0 5px;
-    border-bottom: 1px solid #dddddd;
-}
 
-li label {
-    float: left;
-    cursor: pointer;
-}
-
-li input {
-    margin-left: 2px;
-    margin-right: 3px;
-}
-
-li label li input {
-    vertical-align: middle;
-    margin-right: 6px;
-    position: relative;
-}
-
-li:before {
-    content: initial;
-}
-
-li:last-child {
-    border-bottom: none;
-}
-
-li:hover {
-    background-color: lightskyblue;
-}
-
-li button {
-    float: right;
-    display: none;
-    margin-top: 5px;
-}
-
-li:hover button {
-    display: block;
+.item {
+    display: flex;
+    justify-content: space-between;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
-    <ul class="todo-main">
+    <div class="todo-main">
         <ListItem v-for="item in props.items" :key="item.id" :item="item" :toggleTodo="toggleItem" :removeTodo="removeItem" />
-    </ul>
+    </div>
 </template>
 
 <script setup>
@@ -23,8 +23,6 @@ function removeItem(id) {
 <style scoped>
 .todo-main {
     margin-left: 0px;
-    border: 1px solid #dddddd;
-    border-radius: 5px;
-    padding: 0px;
+    padding: 1px;
 }
 </style>

@@ -30,6 +30,7 @@ export default {
   },
   methods: {
     addItem(item) {
+      item.id = this.defaultId++;
       this.items.push(item);
     },
     toggleItem(id) {

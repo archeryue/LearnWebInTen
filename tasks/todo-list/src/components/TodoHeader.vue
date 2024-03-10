@@ -8,21 +8,20 @@
 <script setup>
 import { ref } from 'vue';
 
-const props = defineProps(["defaultId", "addTodo"]);
+const props = defineProps(["addTodo"]);
 const todoText = ref('');
 
 function addItem() {
     if(!todoText.value.trim()) return alert("input should not be empty.");
-    const item = {id: props.defaultId, text:todoText.value, done:false};
+    const item = {text:todoText.value, done:false};
     props.addTodo(item);
     todoText.value = '';
-    props.defaultId++;
 }
 </script>
 
 <style scoped>
 .todo-header input {
-    width: 560px;
+    width: 563px;
     height: 28px;
     font-size: 14px;
     border: 1px solid #cccccc;
