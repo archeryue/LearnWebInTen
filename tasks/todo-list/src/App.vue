@@ -10,38 +10,33 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import TodoHeader from './components/TodoHeader.vue';
 import TodoFooter from './components/TodoFooter.vue';
 import TodoList from './components/TodoList.vue';
 
-export default {
-  name: 'App',
-  components: { TodoHeader, TodoList, TodoFooter }, 
-  data() {
-    return {
-      items: [
-        { id: 0, text: 'coding: vue project todo-list', done: true },
-        { id: 1, text: 'reading: walden', done: false },
-        { id: 2, text: 'working: prepare jd', done: false }
-      ],
-      defaultId: 3
-    }
-  },
-  methods: {
-    addItem(item) {
-      item.id = this.defaultId++;
-      this.items.push(item);
-    },
-    toggleItem(id) {
-      this.items.forEach((item) => {
-        if(item.id === id) item.done = !item.done;
-      })
-    },
-    removeItem(id) {
-      this.items = this.items.filter(item => item.id !== id);
-    }
-  }
+import { ref } from 'vue';
+
+const items = ref([
+  { id: 0, text: 'coding: vue project todo-list', done: true },
+  { id: 1, text: 'reading: walden', done: false },
+  { id: 2, text: 'working: prepare jd', done: false }
+]);
+const defaultId = ref(3);
+
+function addItem(item) {
+  item.id = defaultId.value++;
+  items.value.push(item);
+}
+
+function toggleItem(id) {
+  items.value.forEach((item) => {
+    if(item.id === id) item.done = !item.done;
+  })
+}
+
+function removeItem(id) {
+  items.value = items.value.filter(item => item.id !== id);
 }
 </script>
 
