@@ -12,7 +12,7 @@
     - Simplify CSS syntax: define some Classes to express complex CSS statements.
     - Write in HTML tags directly, because Classes are simple enough.
     - What about reusability?
-        - you can define new Class with @apply to combine resuable Classes. Don't overuse it, because too many custom Classes are not easy to maintain.
+        - you can define a custom Class with @apply to combine resuable Classes. Don't overuse it, because too many custom Classes are not easy to maintain.
         - you can define a resuable Component with tailwindCSS style in Vue.js.
     - Webpack or other packers can convert these Classes into CSS files.
 
