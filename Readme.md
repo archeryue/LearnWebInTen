@@ -9,9 +9,9 @@
  - Day 2: Basically understand vue.js, write a simple Vue demo.
  - Day 3: Essentials of Vue.js : Reactivity & Rendering Mechanism.
  - Day 4: More details on Vue.js, Vue demo coding.
- - Day 5: Learn UI framework, find a UI framework that works well with Vue(element+?).
- - Day 6: Another day for UI framework. explore nodejs.
- - Day 7: Learn how to Build and Deploy frontend project(webpack?&nginx?).
- - Day 8: Learn Flask, Combine the frontend and backend.
+ - Day 5: Learn UI framework, find a UI framework which works well with Vue(element+? tailwindCSS?).
+ - Day 6: Another day for UI framework. Dive into TailwindCSS.
+ - Day 7: Learn how to Build and Deploy frontend project(webpack? vite? nginx?).
+ - Day 8: Learn Flask/NodeJS, Combine the frontend and backend.
  - Day 9: Start the final project, Pick one.
  - Day 10: Complete the final project.
