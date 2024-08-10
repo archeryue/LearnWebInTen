@@ -39,7 +39,7 @@
    - Contrast: contrast-50 hover:contrast-100
    - GrayScale: grayscale hover:grayscale-0
  - Animations: 
-   - Transition: transition delay-500 hover:-translate-y-1
+   - Transition: transition delay-500 duration-300 hover:-translate-y-1
    - Animation: animate-spin, animate-ping, animate-pulse, animate-bounce
    - Transform: scale-125, rotate-45, transition origin-top-left hover:rotate-45
  - Customization: config tailwind.config.js
