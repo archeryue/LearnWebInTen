@@ -19,6 +19,7 @@
  - Spaces & Size:
     - Padding & Margin: p-0, pt-6, pb-4, mb-4, -mt-8
     - Width & Height: w-24, w-96, h-24, h-96, (under flex) w-1/2, w-1/3, w-full, min-w-0, max-w-full, min-w-min
+    - Space: space-x-5, space-y-6, 
  - Flex & Grids
     - Flex Direction: flex flex-col, flex flex-row-reverse, flex flex-col md:flex-row
     - Flex Children Size: basis-32, basis-1/4, basis-3/4, grow, md:w-32
@@ -28,7 +29,7 @@
     - Align Items: flex justify-between items-center
     - Gap: gap-1, gap-x-0 gap-y-2
  - Layouts: container mx-atuo, column-lg 
- - Borders: border, border-l-3, border-dotted border-red-600
+ - Borders: border, border-l-3, border-dotted border-red-600, divide-y
 
 ## Tailwind CSS Advanced Usage
  - Effects & Filters: 
