@@ -8,15 +8,16 @@
 <script setup>
 import { computed } from 'vue';
 
-const props = defineProps({
-    items: Array
-});
+import { useItemStore } from '@/stores/ItemStore';
+
+const todo = useItemStore();
+
 const totalCount = computed(() => {
-    return props.items.length;
+    return todo.items.length;
 });
 
 const doneCount = computed(() => {
-    return props.items.reduce((pre, item) => pre + (item.done ? 1 : 0), 0);
+    return todo.items.reduce((pre, item) => pre + (item.done ? 1 : 0), 0);
 });
 </script>
 

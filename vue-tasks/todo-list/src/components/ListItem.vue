@@ -11,22 +11,24 @@
 </template>
 
 <script setup>
+import { useItemStore } from '@/stores/ItemStore';
+
+const todo = useItemStore();
+
 const props = defineProps({
     item: {
         type: Object,
         required: true
     },
-    toggleTodo: Function,
-    removeTodo: Function
 });
 
 function toggleItem(id) {
-    props.toggleTodo(id);
+    todo.toggleItem(id);
 }
 
 function removeItem(id) {
     if (confirm('Are you sure you want to delete this item?')) {
-        props.removeTodo(id);
+        todo.removeItem(id);
     }
 };
 </script>

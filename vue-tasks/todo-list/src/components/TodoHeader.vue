@@ -7,14 +7,16 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useItemStore } from '@/stores/ItemStore';
 
-const props = defineProps(["addTodo"]);
+const todo = useItemStore();
+
 const todoText = ref('');
 
 function addItem() {
     if(!todoText.value.trim()) return alert("input should not be empty.");
     const item = {text:todoText.value, done:false};
-    props.addTodo(item);
+    todo.addItem(item);
     todoText.value = '';
 }
 </script>
