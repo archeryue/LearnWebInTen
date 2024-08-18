@@ -3,9 +3,12 @@ import { defineStore } from 'pinia';
 export const useItemStore = defineStore('task', {
     state: () => ({
         items: [
-            { id: 0, text: 'coding: vue project todo-list', done: true, today: true },
-            { id: 1, text: 'reading: walden', done: false, today: true },
-            { id: 2, text: 'working: prepare jd', done: false, today: false },
+            { id: 0, text: 'coding: vue project todo-list', 
+                done: true, today: true, important: false },
+            { id: 1, text: 'reading: walden', 
+                done: false, today: true, important: false },
+            { id: 2, text: 'working: prepare jd', 
+                done: false, today: false, important: false },
         ],
         defaultId: 3,
     }),
@@ -25,6 +28,11 @@ export const useItemStore = defineStore('task', {
         scheduleItem(id) {
             this.items.forEach((item) => {
                 if (item.id === id) item.today = !item.today
+            })
+        },
+        markImportant(id) {
+            this.items.forEach((item) => {
+                if (item.id === id) item.important = !item.important
             })
         },
         todayItems() {
