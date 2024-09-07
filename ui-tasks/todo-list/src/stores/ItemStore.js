@@ -4,7 +4,7 @@ export const useItemStore = defineStore('task', {
     state: () => ({
         items: [
             { id: 0, text: 'coding: vue project todo-list', 
-                done: true, today: true, important: false },
+                done: true, today: true, important: true },
             { id: 1, text: 'reading: walden', 
                 done: false, today: true, important: false },
             { id: 2, text: 'working: prepare jd', 
@@ -35,8 +35,17 @@ export const useItemStore = defineStore('task', {
                 if (item.id === id) item.important = !item.important
             })
         },
+        filterItems(condition) {
+            return this.items.filter(condition)
+        },
         todayItems() {
-            return this.items.filter(item => item.today)
-        }
+            return this.filterItems(item => item.today)
+        },
+        importantItems() {
+            return this.filterItems(item => item.important)
+        },
+        doneItems() {
+            return this.filterItems(item => item.done)
+        },
     }
 });
