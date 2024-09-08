@@ -1,5 +1,5 @@
 <template>
-  <TaskList title="Today's Tasks" :tasks="todayTasks" @showDetails="showTaskDetails" />
+  <TaskList title="Today's Challenge" :tasks="todayTasks" @showDetails="showTaskDetails" />
 </template>
 
 <script setup>
