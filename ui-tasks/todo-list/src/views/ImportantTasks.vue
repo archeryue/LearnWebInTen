@@ -1,5 +1,5 @@
 <template>
-  <TaskList title="Important Tasks" :tasks="importantTasks" @showDetails="showTaskDetails" />
+  <TaskList title="Important Tasks" :tasks="importantTasks" view="important" @showDetails="showTaskDetails" />
 </template>
 
 <script setup>
