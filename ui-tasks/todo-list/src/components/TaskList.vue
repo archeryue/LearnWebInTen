@@ -12,7 +12,7 @@
         @blur="cancelAdd"
         ref="newTaskInput"
         placeholder="Enter task content"
-        class="border rounded px-2 py-1 w-full"
+        class="border rounded border-blue-600 px-2 py-1 w-full"
       />
     </div>
     <!-- Existing task list -->
