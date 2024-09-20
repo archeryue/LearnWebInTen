@@ -42,16 +42,17 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue';
-import { useItemStore } from '@/stores/ItemStore';
+import { useItemStore } from './stores/ItemStore';
+
+const itemStore = useItemStore();
+itemStore.initializeStore();
+
+import { ref } from 'vue';
 import DetailSidebar from '@/components/DetailSidebar.vue';
 import SunIcon from '@/components/icons/SunIcon.vue';
 import StarIcon from '@/components/icons/StarIcon.vue';
 import TaskIcon from '@/components/icons/TaskIcon.vue';
 import SettingIcon from '@/components/icons/SettingIcon.vue';
-
-const itemStore = useItemStore();
-const tasks = computed(() => itemStore.items);
 
 const selectedTask = ref(null);
 const isDetailSidebarOpen = ref(false);

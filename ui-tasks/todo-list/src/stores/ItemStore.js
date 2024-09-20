@@ -1,39 +1,105 @@
 import { defineStore } from 'pinia';
+import { onMounted } from 'vue';
+
+const API_BASE_URL = 'http://localhost:3000/api';
+const TODOS_ENDPOINT = `${API_BASE_URL}/todos/`;
 
 export const useItemStore = defineStore('task', {
     state: () => ({
-        items: [
-            { id: 0, text: 'coding: vue project todo-list', 
-                done: true, today: true, important: true },
-            { id: 1, text: 'reading: walden', 
-                done: false, today: true, important: false },
-            { id: 2, text: 'working: prepare jd', 
-                done: false, today: false, important: false },
-        ],
-        defaultId: 3,
+        items: [],
     }),
     actions: {
-        addItem(item) {
-            item.id = this.defaultId++
-            this.items.push(item)
+        async fetchItems() {
+            try {
+                const response = await fetch(TODOS_ENDPOINT, {
+                    method: 'GET',
+                    credentials: 'include', // Add this line
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                });
+                const data = await response.json();
+                this.items = data;
+            } catch (error) {
+                console.error('Error fetching items:', error);
+            }
         },
-        toggleItem(id) {
-            this.items.forEach((item) => {
-                if (item.id === id) item.done = !item.done
-            })
+        async addItem(item) {
+            try {
+                const response = await fetch(TODOS_ENDPOINT, {
+                    method: 'POST',
+                    credentials: 'include', // Add this line
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(item),
+                });
+                const newItem = await response.json();
+                this.items.push(newItem);
+            } catch (error) {
+                console.error('Error adding item:', error);
+            }
         },
-        removeItem(id) {
-            this.items = this.items.filter(item => item.id !== id)
+        async toggleItem(id) {
+            const item = this.items.find(item => item.id === id);
+            if (item) {
+                item.done = !item.done;
+                await this.updateItem(item);
+            }
         },
-        scheduleItem(id) {
-            this.items.forEach((item) => {
-                if (item.id === id) item.today = !item.today
-            })
+        async removeItem(id) {
+            await this.deleteItem(id);
         },
-        markImportant(id) {
-            this.items.forEach((item) => {
-                if (item.id === id) item.important = !item.important
-            })
+        async scheduleItem(id) {
+            const item = this.items.find(item => item.id === id);
+            if (item) {
+                item.today = !item.today;
+                await this.updateItem(item);
+            }
+        },
+        async markImportant(id) {
+            const item = this.items.find(item => item.id === id);
+            if (item) {
+                item.important = !item.important;
+                await this.updateItem(item);
+            }
+        },
+        async updateItem(item) {
+            try {
+                const response = await fetch(`${TODOS_ENDPOINT}${item.id}`, {
+                    method: 'PUT',
+                    credentials: 'include', // Add this line
+                    headers: { 
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify(item),
+                });
+                const updatedItem = await response.json();
+                const index = this.items.findIndex(i => i.id === updatedItem.id);
+                if (index !== -1) {
+                    this.items[index] = updatedItem;
+                }
+            } catch (error) {
+                console.error('Error updating item:', error);
+            }
+        },
+        async deleteItem(id) {
+            try {
+                await fetch(`${TODOS_ENDPOINT}${id}`, {
+                    method: 'DELETE',
+                    credentials: 'include', // Add this line
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                });
+                this.items = this.items.filter(item => item.id !== id);
+            } catch (error) {
+                console.error('Error deleting item:', error);
+            }
         },
         filterItems(condition) {
             return this.items.filter(condition)
@@ -46,6 +112,11 @@ export const useItemStore = defineStore('task', {
         },
         doneItems() {
             return this.filterItems(item => item.done)
+        },
+        initializeStore() {
+            onMounted(() => {
+                this.fetchItems();
+            });
         },
     }
 });
