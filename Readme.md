@@ -14,4 +14,4 @@
  - [Day 7: Rewrite the Todo-List with Vue3 + TailwindCSS.](day7.md)
  - [Day 8: Learn NodeJS, Combine the frontend and backend.](day8.md)
  - [Day 9: Learn about Build Tools: Webpack/Vite](day9.md)
- - Day 10: Learn about Nginx, Deploy the project.
+ - [Day 10: Learn about Nginx, Deploy the project.](day10.md)
