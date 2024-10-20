@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia';
 import { onMounted } from 'vue';
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'http://localhost:8080/api';
 const TODOS_ENDPOINT = `${API_BASE_URL}/todos/`;
 
 export const useItemStore = defineStore('task', {
